@@ -9,7 +9,7 @@
     </parameters>
 
     <services>        
-        <service id="mqm_tools.ini_reader" class="MQM\ToolsBundle\IO\IniReader" public="true">
+        <service id="mqm_tools.ini_reader" class="MQM\ToolsBundle\IO\IniProperties" public="true">
         </service>
         
         <service id="tools.twig.extension" class="MQM\ToolsBundle\Twig\Extension\ToolsExtension" public="false">

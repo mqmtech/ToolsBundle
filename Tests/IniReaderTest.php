@@ -4,13 +4,13 @@ namespace MQM\ToolsBundle\Test;
 
 
 
-use MQM\ToolsBundle\IO\IniReader;
+use MQM\ToolsBundle\IO\IniProperties;
 
-class IniReaderTest extends \Symfony\Bundle\FrameworkBundle\Test\WebTestCase
+class IniPropertiesTest extends \Symfony\Bundle\FrameworkBundle\Test\WebTestCase
 {   
     protected $_container;
     /**
-     * @var IniReader
+     * @var IniProperties
      */
     private $iniReader;
 
@@ -39,7 +39,7 @@ class IniReaderTest extends \Symfony\Bundle\FrameworkBundle\Test\WebTestCase
     
     public function testReadIniProperties()
     {
-        $this->iniReader->setPath(__DIR__ . '/' . 'test_properties.ini');
+        $this->iniReader->parse(__DIR__ . '/' . 'test_properties.ini');
         $field1 = $this->iniReader->getProperty('field1');
         $this->assertEquals('value1', $field1);
         $field2 = $this->iniReader->getProperty('field2');
