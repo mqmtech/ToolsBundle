@@ -12,6 +12,9 @@
         <service id="mqm_tools.ini_reader" class="MQM\ToolsBundle\IO\IniProperties" public="true">
         </service>
         
+        <service id="mqm_tools.yaml_reader" class="MQM\ToolsBundle\IO\YAMLProperties" public="true">
+        </service>
+        
         <service id="tools.twig.extension" class="MQM\ToolsBundle\Twig\Extension\ToolsExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="mqm_tools.utils"/>
