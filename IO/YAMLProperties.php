@@ -49,17 +49,24 @@ final class YAMLProperties implements PropertiesInterface
         return null;
     }
 
-    public function setProperty($name, $value)
+    public function setProperty($name, $value, $andFlush = true)
     {
         $this->properties[$name] = $value;
+        if ($andFlush) {
+            $this->flush();
+        }
+        return $this;
+    }
+
+    public function flush()
+    {
         try {
             $this->saveToYAMLFile();
         }
         catch (DumpException $e) {
             printf("Unable to save the YAML array: %s", $e->getMessage());
         }
-        
-        return $this;
+
     }
     
     private function saveToYAMLFile()
