@@ -33,6 +33,8 @@ class ToolsExtension extends \Twig_Extension
             'mqm_tools_truncate' => new \Twig_Filter_Method($this, 'truncate'),
             'mqm_tools_first_letter_capital' => new \Twig_Filter_Method($this, 'firstLetterCapital'),
             'mqm_tools_floor' => new \Twig_Filter_Method($this, 'floor'),
+            'mqm_tools_decimal_to_percentage' => new \Twig_Filter_Method($this, 'decimalToPercentage'),
+            'mqm_tools_percentage_to_decimal' => new \Twig_Filter_Method($this, 'percentageToDecimal'),
         );
     }
 
@@ -54,5 +56,15 @@ class ToolsExtension extends \Twig_Extension
     public function floor($number)
     {
         return floor($number);
+    }
+
+    public function decimalToPercentage($decimal)
+    {
+        return $this->utils->decimalToPercentage($decimal);
+    }
+
+    public function percentageToDecimal($percentage)
+    {
+        return $this->utils->percentageToDecimal($percentage);
     }
 }

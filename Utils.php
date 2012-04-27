@@ -225,4 +225,14 @@ class Utils
         
         return $float;
     }
+
+    public function decimalToPercentage($decimal)
+    {
+        return ((float)$decimal) * ((float)100.0);
+    }
+
+    public function percentageToDecimal($percentage)
+    {
+        return ((float)$percentage) / ((float)100.0);
+    }
 }
