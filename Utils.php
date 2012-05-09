@@ -60,13 +60,12 @@ class Utils
 
         $length = strlen($word);
         if ($length >= $maxLength) {
-            $newStr = substr($word, 0, $maxLength);
-            //echo $newStr;
+            $newStr = substr($word, 0, $maxLength - 1);
             if($moreInfoLink != null){
-                $newStr.="<a href='" . $moreInfoLink . "'>...</a>";
+                $newStr.="<a href='" . $moreInfoLink . "'>..</a>";
             }
             else{
-                $newStr.="...";
+                $newStr.="..";
             }
             
             return $newStr;

@@ -45,7 +45,7 @@ class ToolsExtension extends \Twig_Extension
     
     public function truncate($word, $maxLength = null, $moreInfoLink=null)
     {
-        return $this->utils->truncate($word, $maxLength, $moreInfoLink);
+        return $this->utils->truncate($word, (integer) $maxLength, $moreInfoLink);
     }
     
     public function firstLetterCapital($words)
