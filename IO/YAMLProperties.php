@@ -42,7 +42,7 @@ final class YAMLProperties implements PropertiesInterface
         if ($this->properties == null) {
             $this->parse();
         }
-        
+
         if (isset($this->properties[$name]))
             return $this->properties[$name];
 

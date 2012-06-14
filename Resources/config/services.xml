@@ -9,10 +9,10 @@
     </parameters>
 
     <services>        
-        <service id="mqm_tools.ini_reader" class="MQM\ToolsBundle\IO\IniProperties" public="true">
+        <service id="mqm_tools.ini_reader" class="MQM\ToolsBundle\IO\IniProperties" public="true" scope="prototype">
         </service>
         
-        <service id="mqm_tools.yaml_reader" class="MQM\ToolsBundle\IO\YAMLProperties" public="true">
+        <service id="mqm_tools.yaml_reader" class="MQM\ToolsBundle\IO\YAMLProperties" public="true" scope="prototype">
         </service>
         
         <service id="tools.twig.extension" class="MQM\ToolsBundle\Twig\Extension\ToolsExtension" public="false">
